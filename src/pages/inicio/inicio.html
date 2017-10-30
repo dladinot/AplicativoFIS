@@ -1,0 +1,21 @@
+
+<ion-header>
+</ion-header>
+
+<ion-content padding class="background">
+    <h1 class="titulo">
+        Sistema de Gestión de Monitorias
+        <img src="../../assets/icon/Img1-200px.png" alt="" >
+    </h1>
+
+    <ion-item>
+        <ion-label floating color="mBlue">Correo Electrónico</ion-label>
+        <ion-input type="text" [(ngModel)]="user.email"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating color="mBlue">Contraseña</ion-label>
+        <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+    <button ion-button full (click)="login(user)">Ingresar</button>
+    
+</ion-content>

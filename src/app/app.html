@@ -1,0 +1,56 @@
+<ion-menu [content]="content" id="menu1" enabled="false">
+
+  <ion-header>
+    <ion-toolbar color="secondary">
+      <ion-title>Menú Administrador</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <button  color="light" ion-item *ngFor="let pagina of paginasAdmin" (click)="goToPage(pagina.component)" menuClose>
+                  <ion-icon item-left name="{{ pagina.icon }}" item-start></ion-icon>
+                      {{ pagina.title }}
+              </button>
+  </ion-content>
+
+</ion-menu>
+
+
+<ion-menu [content]="content" id="menu2" enabled="false">
+
+  <ion-header>
+    <ion-toolbar color="danger">
+      <ion-title>Menú Profesor</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button ion-item menuClose="menu2" detail-none>
+        En construccion....
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<ion-menu [content]="content" id="menu3" enabled="false">
+
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menú Estudiante</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button ion-item menuClose="menu3" detail-none>
+        En construccion....
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+
+<ion-nav #NAV [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

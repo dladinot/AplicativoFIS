@@ -1,0 +1,11 @@
+page-registro {
+    .titulo {
+        color: map-get($colors, "mBlue");
+        text-align: center;
+        font-size: 6mm;
+        font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;        
+        font-style: normal;
+        font-variant: small-caps;
+    }
+
+}

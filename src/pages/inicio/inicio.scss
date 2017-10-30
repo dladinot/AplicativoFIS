@@ -1,0 +1,28 @@
+page-inicio {
+    .titulo {
+        color: map-get($colors, "mBlue");
+        text-align: center;
+        font-size: 15mm;
+        font-family: "Rockwell Extra Bold", "Rockwell Bold", monospace;        
+        font-style: normal;
+        font-variant: small-caps;
+    }
+    .text {
+        color: map-get($colors, "mBlue");
+        text-align: center;
+        font-family: "Blooming Grove";
+        font-size: 3mm;
+    }
+    .background {
+        background: linear-gradient(360deg, #FF5200,#F7F09B,#41C5D3,#BCFCC9);
+        background-size: 400% 400%;
+        animation: colorchange 25s ease-out infinite;
+    }
+    @keyframes colorchange {
+        0%{background-position: 0% 99%}
+        50%{background-position: 100% 1%}
+        100%{background-position: 10% 90%}
+        
+    }
+
+}

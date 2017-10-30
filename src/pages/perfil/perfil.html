@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar color="mBlue">
+    <button ion-button menuToggle="">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Perfil</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label fixed color="mBlue">Nombre:</ion-label>
+    <ion-input disabled={{boolInputs}} type="text" value="{{nombre}}" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label fixed color="mBlue">Apellido:</ion-label>
+    <ion-input disabled={{boolInputs}} type="text" value="{{apellido}}" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label fixed color="mBlue">Carrera:</ion-label>
+    <ion-input disabled={{boolInputs}} type="text" value="{{proyectoCurricular}}" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label fixed color="mBlue">Correo:</ion-label>
+    <ion-input disabled={{boolInputs}} type="text" value="{{correoPersonal}}" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label fixed color="mBlue">Teléfono:</ion-label>
+    <ion-input disabled={{boolInputs}} type="text" value="{{telefono}}" ></ion-input>
+  </ion-item>
+
+
+</ion-content>

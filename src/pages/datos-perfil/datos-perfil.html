@@ -1,0 +1,47 @@
+
+<ion-header>
+
+  <ion-navbar color="mBlue">
+    <ion-title>Información básica</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <h1 class="titulo">
+    <img src="../../assets/icon/Img3-150px.png" alt=""><br/>
+    Para poder hacer uso de la plataforma primero completa tu información de
+     perfil:</h1>
+  <ion-item>
+    <ion-label color="greenSea">Nombre:</ion-label>
+    <ion-input [(ngModel)]="profile.nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label color="greenSea">Apellido:</ion-label>
+      <ion-input [(ngModel)]="profile.apellido"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label color="greenSea">Proyecto curricular:</ion-label>
+      <ion-input [(ngModel)]="profile.proyectoCurricular"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label color="greenSea">Telefono:</ion-label>
+      <ion-input [(ngModel)]="profile.telefono"></ion-input>
+  </ion-item>
+  <ion-item>
+      <ion-label color="greenSea">Correo personal:</ion-label>
+      <ion-input [(ngModel)]="profile.correoPersonal"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Rol del usuario:</ion-label>
+    <ion-select (ionChange)="habilitarBoton($event)" [(ngModel)]="rol">
+      <ion-option value="profesor">Profesor</ion-option>
+      <ion-option value="estudiante">Estudiante</ion-option>
+    </ion-select>
+  </ion-item>
+
+  <button ion-button [disabled]="getbotonActivado()" block (click)="createProfile()">Confirmar</button>
+
+</ion-content>
