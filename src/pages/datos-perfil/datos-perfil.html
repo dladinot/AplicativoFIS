@@ -34,14 +34,7 @@
       <ion-input [(ngModel)]="profile.correoPersonal"></ion-input>
   </ion-item>
 
-  <ion-item>
-    <ion-label>Rol del usuario:</ion-label>
-    <ion-select (ionChange)="habilitarBoton($event)" [(ngModel)]="rol">
-      <ion-option value="profesor">Profesor</ion-option>
-      <ion-option value="estudiante">Estudiante</ion-option>
-    </ion-select>
-  </ion-item>
 
-  <button ion-button [disabled]="getbotonActivado()" block (click)="createProfile()">Confirmar</button>
+  <button ion-button block (click)="createProfile()">Confirmar</button>
 
 </ion-content>

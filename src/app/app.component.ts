@@ -5,6 +5,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { InicioPage } from '../pages/inicio/inicio';
 import { PerfilPage } from '../pages/perfil/perfil';
 import { HomePage } from '../pages/home/home';
+import { UsuariosPage } from '../pages/usuarios/usuarios';
+
 
 
 @Component({
@@ -21,7 +23,8 @@ export class MyApp {
 
   this.paginasAdmin = [
     {title: 'Home',  component: HomePage, icon: 'home'},
-    {title: 'Perfil',  component: PerfilPage, icon: 'person'}
+    {title: 'Perfil',  component: PerfilPage, icon: 'person'},
+    {title: 'Usuarios',  component: UsuariosPage, icon: 'people'}
   ];
 
     platform.ready().then(() => {

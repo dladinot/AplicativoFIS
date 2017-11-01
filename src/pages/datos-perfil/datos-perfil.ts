@@ -14,23 +14,10 @@ import { AngularFireDatabase } from 'angularfire2/database';
 export class DatosPerfilPage {
 
   profile = {} as Profile;
-  botonActivado:boolean=false;
-  rol:string;
 
+  //reestringir el botón para que no envíe datos vacios
   constructor(private afAuth: AngularFireAuth, private afDataBase: AngularFireDatabase,
      public navCtrl: NavController, public navParams: NavParams) {
-  }
-
-  getbotonActivado(){
-    return !this.botonActivado;
-  }
-  habilitarBoton(){
-    if(this.rol==null){
-      this.botonActivado=false;
-    }
-    else{
-      this.botonActivado=true;
-    }
   }
 
   ionViewDidLoad() {
@@ -38,7 +25,6 @@ export class DatosPerfilPage {
   }
 
   createProfile() {
-    this.profile.rol=this.rol;
     this.afAuth.authState.take(1).subscribe(auth => {
       this.afDataBase.object(`profile/${auth.uid}`).set(this.profile).then(
         () => this.navCtrl.setRoot('HomePage')

@@ -1,4 +1,6 @@
+import { AdicionarUsuarioPageModule } from '../pages/adicionar-usuario/adicionar-usuario.module';
 import { HomePageModule } from '../pages/home/home.module';
+import { UsuariosPageModule } from '../pages/usuarios/usuarios.module';
 import { PerfilPageModule } from '../pages/perfil/perfil.module';
 import { InicioPageModule } from '../pages/inicio/inicio.module';
 import { FIREBASE_CONFIG } from './app.firebase.config';
@@ -26,7 +28,9 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
     AngularFireDatabaseModule,
     InicioPageModule,
     PerfilPageModule,
-    HomePageModule
+    HomePageModule,
+    UsuariosPageModule,
+    AdicionarUsuarioPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

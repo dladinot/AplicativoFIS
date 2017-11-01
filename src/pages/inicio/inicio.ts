@@ -20,9 +20,7 @@ export class InicioPage {
     public loadingCtrl: LoadingController, public events: Events,
     private afDataBase: AngularFireDatabase,
     public navCtrl: NavController, public navParams: NavParams) {
-      events.subscribe('showConfirmation', () => {
-        this.showConfirmation();
-      });
+
   }
 
   ionViewDidLoad() {
@@ -58,19 +56,6 @@ export class InicioPage {
           });
           loader.present();
         })
-  }
-
-  register(){
-    this.navCtrl.push('RegistroPage');
-  }
-
-  public showConfirmation(){
-    let loader = this.loadingCtrl.create({
-      spinner: 'hide',
-      content: 'Usuario registrado con éxito.',
-      duration: 1500
-    });
-    loader.present();
   }
 
 }
